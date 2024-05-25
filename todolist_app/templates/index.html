@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    <title>Home</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-4 ">
+            <img src="{% static 'images/volodymyr-hryshchenko-KZocXyI3kRo-unsplash.jpg' %}" class="rounded shadow-sm" alt="notesimg" width="360" heigth="250">
+        </div>
+        <div class="col-lg-4">
+            <img src="{% static "images/diana-polekhina-1ixT36dfuSQ-unsplash.jpg" %}" class="rounded shadow-sm" alt="notesimg" width="360" heigth="250">
+        </div>
+        <div class="col-lg-4">
+            <img src="{% static "images/david-travis-5bYxXawHOQg-unsplash.jpg" %}" class="rounded shadow-sm" alt="notesimg" width="360" heigth="250">
+        </div>
+      </div>
+    <div class='row mt-5'>
+        <div class="col-md-10 offset-md-1">
+            <center><p class="h1 text-primary">Quick And Easy To Use, Anytime, Anywhere!</P></center>
+            <center><p class="h2 mt-3">"Plan Your Day Better, Get Your Life Organized"</P></center>
+            <center><p class="h5">TASKMATE lets You Keep Track Of Your Task In One Place.</P></center>
+            <center><a href="todolist "><button type="button" class="btn btn-primary btn-lg shadow mt-3">Lets Get Started</button></a></center>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Edit-page</title>
+{% endblock title %}
+
+{% block content %}
+{% if task_obj.manager == request.user %}
+    <form method="POST" class="row">
+        {% csrf_token %}
+        <input type="text" class="col-lg-2 form-control" name="task" placeholder={{task_obj.task}} value={{task_obj.task}}>
+        <input type="hidden" name="done" value={{task_obj.done}}>
+        <button type="submit" class="col-lg-2 btn btn-primary">Submit</button>
+        </form>
+{% else %}
+    <h4>User Restricted !!! You're not allowed to access this page.</h4>
+{% endif %}
+{% endblock content %}
